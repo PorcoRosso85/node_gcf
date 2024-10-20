@@ -26,4 +26,12 @@ type storeTo = {
   updatedAt: string; // iso8601
 }
 
-type storeToBigQuery = {}
+type storeToBigQuery = {
+  id: string; // uuidv4
+  outputFormat: string;
+  query: string;
+  prompt: string;
+  createdAt: string; // iso8601
+  reviewedBool: boolean | null;
+  updatedAt: string; // iso8601
+}
