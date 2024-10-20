@@ -9,7 +9,8 @@ function turnAnswerToStore(answerByDialogFlow: answerByDialogFlow): storeToBigQu
     id: 1,
     outputFormat: 'メール文面',
     query: 'query',
-    prompt: 'prompt',
+    prompt: '',
+    answer: '',
     createdAt: currentDate,
     reviewBool: null,
     updatedAt: currentDate,
@@ -30,6 +31,7 @@ type storeToBigQuery = {
   outputFormat: string
   query: string
   prompt: string
+  answer: string
   createdAt: string // iso8601
   reviewBool: boolean | null
   updatedAt: string // iso8601
@@ -88,33 +90,33 @@ type storeToBigQuery = {
 }
 */
 type answerByDialogFlow = {
-  responseId: string;
+  responseId: string
   queryResult: {
-    text: string;
-    languageCode: string;
+    text: string
+    languageCode: string
     responseMessages: Array<{
       text: {
-        text: string[];
-      };
-    }>;
+        text: string[]
+      }
+    }>
     currentPage: {
-      name: string;
-      displayName: string;
-    };
+      name: string
+      displayName: string
+    }
     intent: {
-      name: string;
-      displayName: string;
-    };
-    intentDetectionConfidence: number;
-    diagnosticInfo: object;
+      name: string
+      displayName: string
+    }
+    intentDetectionConfidence: number
+    diagnosticInfo: object
     match: {
       intent: {
-        name: string;
-        displayName: string;
-      };
-      resolvedInput: string;
-      matchType: string;
-      confidence: number;
-    };
-  };
+        name: string
+        displayName: string
+      }
+      resolvedInput: string
+      matchType: string
+      confidence: number
+    }
+  }
 }
