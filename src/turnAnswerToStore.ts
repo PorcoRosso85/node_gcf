@@ -87,4 +87,34 @@ type storeToBigQuery = {
   }
 }
 */
-type answerByDialogFlow = {}
+type answerByDialogFlow = {
+  responseId: string;
+  queryResult: {
+    text: string;
+    languageCode: string;
+    responseMessages: Array<{
+      text: {
+        text: string[];
+      };
+    }>;
+    currentPage: {
+      name: string;
+      displayName: string;
+    };
+    intent: {
+      name: string;
+      displayName: string;
+    };
+    intentDetectionConfidence: number;
+    diagnosticInfo: object;
+    match: {
+      intent: {
+        name: string;
+        displayName: string;
+      };
+      resolvedInput: string;
+      matchType: string;
+      confidence: number;
+    };
+  };
+}
