@@ -5,12 +5,17 @@ DialogFlowからの回答を週出し、保存用構造へ変換する
 */
 function turnAnswerToStore(answerByDialogFlow: answerByDialogFlow): storeToBigQuery {
   const currentDate = new Date().toISOString()
+  const prompt = answerByDialogFlow.queryResult.text;
+  const answer = answerByDialogFlow.queryResult.responseMessages
+    .map(message => message.text.text.join(' '))
+    .join(' ');
+
   return {
     id: 1,
     outputFormat: 'メール文面',
     query: 'query',
-    prompt: '',
-    answer: '',
+    prompt: prompt,
+    answer: answer,
     createdAt: currentDate,
     reviewBool: null,
     updatedAt: currentDate,
