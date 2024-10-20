@@ -8,7 +8,7 @@ import { cloudSQLClient } from './path/to/cloudSQLClient' // Adjust the import p
 import { AnswerHistory } from './AnswerHistory' // Adjust the import path as necessary
 import { writeFileSync } from 'fs'
 
-function genCSVFile(answerHistoryIDs: string[], tableName: string): any {
+function genCSVFile(answerHistoryIDs: string[], tableName: string): Result<string, any> {
   const query = `
     SELECT * FROM ${tableName}
     WHERE id IN (${answerHistoryIDs.join(',')})
@@ -25,10 +25,9 @@ function genCSVFile(answerHistoryIDs: string[], tableName: string): any {
         .join('\n')
 
       writeFileSync('answer_history.csv', csvContent)
-      return 'CSV file generated successfully'
+      return ok('CSV file generated successfully')
     })
     .catch((error: any) => {
-      console.error('Error generating CSV file:', error)
-      throw error
+      return err('Error generating CSV file: ' + error)
     })
 }
