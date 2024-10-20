@@ -4,15 +4,15 @@ import { Result, ok, err } from 'neverthrow'
 DialogFlowからの回答を週出し、保存用構造へ変換する
 */
 function turnAnswerToStore(answer: any): storeToBigQuery {
+  const currentDate = new Date().toISOString();
   return {
-    id: 0000000001,
+    id: 1,
     outputFormat: "メール文面",
     query: "query",
     prompt: "prompt",
-    createdAt: "",
+    createdAt: currentDate,
     reviewBool: null,
-    updatedAt: ""
-    
+    updatedAt: currentDate
   }
 }
 
