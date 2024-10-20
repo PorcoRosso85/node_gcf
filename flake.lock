@@ -1,0 +1,97 @@
+{
+  "nodes": {
+    "mkShellRepo1": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "dir": "dev/typescript",
+        "lastModified": 1729410813,
+        "narHash": "sha256-VgiQOXe5dYzifxbtp0z5bq4aWrOxDJPaFPrf7RFJl+I=",
+        "owner": "PorcoRosso85",
+        "repo": "home",
+        "rev": "97551908436c952ec568a01ed3fbf97dc795aa0d",
+        "type": "github"
+      },
+      "original": {
+        "dir": "dev/typescript",
+        "owner": "PorcoRosso85",
+        "ref": "main",
+        "repo": "home",
+        "type": "github"
+      }
+    },
+    "mkShellRepo2": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1,
+        "narHash": "sha256-WDLtOlio2wPoqTLipaf/FA2/Dhie5h7A66ocwJxncTc=",
+        "path": "./nix",
+        "type": "path"
+      },
+      "original": {
+        "path": "./nix",
+        "type": "path"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1729181673,
+        "narHash": "sha256-LDiPhQ3l+fBjRATNtnuDZsBS7hqoBtPkKBkhpoBHv3I=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4eb33fe664af7b41a4c446f87d20c9a0a6321fa3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-24.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1729181673,
+        "narHash": "sha256-LDiPhQ3l+fBjRATNtnuDZsBS7hqoBtPkKBkhpoBHv3I=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4eb33fe664af7b41a4c446f87d20c9a0a6321fa3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-24.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
+        "lastModified": 1729181673,
+        "narHash": "sha256-LDiPhQ3l+fBjRATNtnuDZsBS7hqoBtPkKBkhpoBHv3I=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4eb33fe664af7b41a4c446f87d20c9a0a6321fa3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-24.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "mkShellRepo1": "mkShellRepo1",
+        "mkShellRepo2": "mkShellRepo2",
+        "nixpkgs": "nixpkgs_3"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

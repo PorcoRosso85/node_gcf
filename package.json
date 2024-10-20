@@ -1,0 +1,33 @@
+{
+  "name": "nodejs-template",
+  "version": "2024.1.0",
+  "license": "Apache-2.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "test": "tsx src/index.test.ts",
+    "test:vitest": "vitest run",
+    "test:playwright": "playwright test",
+    "build": "vite build",
+    "lint": "biome lint src/ tests/",
+    "fmt": "pnpm biome format --write src/ tests/",
+    "check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.2",
+    "@playwright/test": "1.47.2",
+    "tsx": "^4.19.1",
+    "typescript": "5.6.2",
+    "typescript-language-server": "^4.3.3",
+    "vite": "5.4.8",
+    "vitest": "2.1.1"
+  },
+  "packageManager": "pnpm@9.9.0",
+  "engines": {
+    "node": ">=22.8.0"
+  },
+  "dependencies": {
+    "@sinclair/typebox": "^0.33.17",
+    "neverthrow": "^8.0.0"
+  }
+}
